@@ -1,0 +1,31 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        int min_price = Integer.MAX_VALUE; //Integer.MAX_VALUE= 2147483647----> max value of the integer
+        int max_profit = 0;             
+
+        for(int price: prices) 
+//price is a temporary variable
+//Price will iterate through the 'prices' array
+//The iterated values are stored in 'price'
+            {
+            if(price< min_price){
+                min_price= price;
+            }
+
+            int profit = price-min_price;
+
+            if(profit> max_profit){
+                max_profit= profit;
+            }
+
+        }
+        
+        return max_profit; 
+    }
+}
+                                    
+
+
+
+           
+        
